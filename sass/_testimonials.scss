@@ -1,0 +1,186 @@
+// .testimonials{
+//     display: flex;
+//     flex-direction: column;  
+
+//     &__people{
+//         display: flex;
+//         width: 400vw;
+//         margin-left: 0;
+//         transition: 1s;
+//     }
+
+//     &__title{
+//         font-size: 2rem;
+//         color: $dark-blue;
+//         text-align: center;
+//     }
+
+    
+
+//     .buttons-slide{
+//         display: flex;
+//         text-align: center;
+//         justify-content: center;
+//         gap: .3em;
+//         margin-top: 2em;
+//         margin-bottom: 1em;
+
+//         .btnSl{
+//             width: 12px;
+//             height: 12px;
+//             border: 2px solid $bright-red;
+//             border-radius: 50%;
+//             cursor: pointer;
+//             transition: .3s;
+
+//             &:hover{
+//                 background: $bright-red;
+//             }
+
+//             &.active{
+//                 background: $bright-red;
+//             }
+//         }
+//     }
+
+//     .btn{
+//         @include buttonStyle;
+//         text-decoration: none;
+//         font-weight: $fw-xb;
+//         font-size: 1rem;
+//         padding: .5em 2em;
+//         box-shadow: 0 5px 4px 0 rgba(242,95,58, .5);
+//         margin: 2em auto;
+//     }
+// }
+
+.slider{
+    width: 400vw;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.slides{
+    display: flex;
+
+    input{
+        display: none;
+    }
+}
+
+.slide{
+    width: 25%;
+    transition: 2s;
+    text-align: center;
+    height: 300px;
+
+        .person{
+            background: $very-light-gray;
+            margin: 1em;
+            height: 250px;
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2em;
+                top: 0;
+                left: 0;
+                background: white;
+            }              
+            
+    
+            img{
+                position: relative;
+                width: 20%;
+                margin: auto;
+                z-index: 10;
+            }
+    
+            &-name{
+                color: $dark-blue;
+                font-weight: $fw-xb;
+            }
+    
+            &-paragraph{
+                @include textStyle;
+                font-weight: $fw-b;
+                padding: 0 1em;
+            }
+        }
+
+    }
+
+
+.navigation-manual{
+
+    position: absolute;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    gap: 1em;
+
+    .manual-btn{
+        border: 2px solid $bright-red;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+
+        &:hover{
+            background: $bright-red;
+        }
+    
+    }
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    margin-top: 280px;
+    gap: 1em;
+
+    div{
+        border: 2px solid $bright-red;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: $bright-red;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: $bright-red;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: $bright-red;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: $bright-red;
+}

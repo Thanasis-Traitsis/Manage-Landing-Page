@@ -1,0 +1,60 @@
+.about{
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+
+    &__intro{
+        text-align: center;
+        margin-top: 5em;
+
+        &-heading{
+            font-size: 2rem;
+            color: $dark-blue;
+        }
+
+        &-text{
+            margin-top: 1em;
+            margin-bottom: 3em;
+            @include textStyle;
+        }
+    }
+
+    &__paragraph{
+        .number{
+            @include buttonStyle;
+            font-weight: $fw-b;
+            font-size: 1rem;
+            padding: .2em 1em;
+            margin-right: 1em;
+            right: 1em;
+        }
+
+        .title{
+            position: relative;
+            font-weight: $fw-xb;
+            color: $dark-blue;
+            background: $very-pale-red;
+            left: 1em;
+        }
+
+        .text{
+            margin-top: 1em;
+            margin-bottom: 3em;
+            @include textStyle;
+        }
+    }
+}
+
+.about-test{
+    .btn{
+        @include buttonStyle;
+        text-decoration: none;
+        font-weight: $fw-xb;
+        font-size: 1rem;
+        padding: .5em 2em;
+        box-shadow: 0 5px 4px 0 rgba(242,95,58, .5);
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);     
+    }
+}

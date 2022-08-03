@@ -1,0 +1,19 @@
+@mixin textStyle {
+    font-size: 1rem;
+    color: $dark-grayish-blue;
+    line-height: 1.7;
+}
+
+@mixin buttonStyle {
+    display: inline-block;
+    position: relative;
+    background: $bright-red;
+    color: $very-light-gray;
+    border-radius: 50px;
+}
+
+@mixin media-lg {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

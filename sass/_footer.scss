@@ -1,0 +1,129 @@
+.footer{
+
+    &__first{
+        padding: 0 2em;
+        background: $bright-red;
+        color: white;
+        text-align: center;
+        background-image: url('/dist/images/bg-simplify-section-mobile\ 2.svg');
+        background-size: cover;
+        margin-top: 7em;
+
+        &-title{
+            padding-top: 2em;
+            font-size: 2.4rem;
+        }
+
+        .btn-reverse{
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            background: white;
+            color: $bright-red;
+            border-radius: 50px;
+            font-weight: $fw-xb;
+            font-size: 1rem;
+            padding: .5em 2em;
+            margin: 1em 0 5em;
+        }
+    }
+
+    &__second{
+        background: $very-dark-blue;
+        padding: 0 1em;
+        display: grid;
+        grid-template-rows: minmax(50px,auto) 3fr 2.5fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        .section1{
+            grid-row: 3/4;
+            grid-column: 1/3;
+            text-align: center;
+            margin: auto 0;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 2em;
+
+            .logo{
+                img{
+                    cursor: pointer;
+                }
+            }
+
+            .icons{
+
+                img{
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                    margin-top: 2em;
+                    margin-left: .7em;
+                    margin-right: .7em;
+                }
+            }
+        }
+
+        .section2{
+            grid-row: 2/3;
+            grid-column: 1/2;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+
+            a{
+                color: $very-light-gray;
+                text-decoration: none;
+                margin: .5em 0;
+            }
+        }
+
+        .section3{
+            grid-row: 2/3;
+            grid-column: 2/3;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+
+            a{
+                color: $very-light-gray;
+                text-decoration: none;
+                margin: .5em 0;
+            }
+        }
+
+        .section4{
+            grid-row: 1/2;
+            grid-column: 1/3;
+            text-align: center;
+
+            input{
+                border-radius: 50px;
+                border: none;
+                font-family: $ff-bv;
+                font-weight: $fw-b;
+                font-size: 1rem;
+                padding: .5em 1.5em;
+                margin: 2em auto;
+                color: $dark-grayish-blue;
+            }
+
+            .btn{
+                @include buttonStyle;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: $fw-xb;
+                font-size: 1rem;
+                padding: .5em 1.5em;
+                margin: 2em 0 2em 1em;
+            }
+        }
+
+        .section5{
+            grid-row: 4/5;
+            grid-column: 1/3;
+            text-align: center;
+            margin: auto;
+            color: $dark-grayish-blue;
+        }
+    }
+}
